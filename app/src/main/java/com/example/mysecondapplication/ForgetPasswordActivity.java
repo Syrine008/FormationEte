@@ -1,6 +1,8 @@
 package com.example.mysecondapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,15 +12,18 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ForgetPasswordActivity extends AppCompatActivity {
 
+    private Button goToSignIn ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_forget_password);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        goToSignIn = findViewById(R.id.goTosignIn);
+        goToSignIn.setOnClickListener(v -> {
+            startActivity(new Intent(ForgetPasswordActivity.this,SignInActivity.class));
         });
+
     }
 }

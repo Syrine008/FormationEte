@@ -1,6 +1,9 @@
 package com.example.mysecondapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,15 +13,24 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class SignInActivity extends AppCompatActivity {
 
+    private TextView goToForgetPass ;
+    private Button goToSignUp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_sign_in);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        goToForgetPass = findViewById(R.id.goToForgetPass);
+        goToForgetPass.setOnClickListener(v -> {
+            startActivity(new Intent(SignInActivity.this,ForgetPasswordActivity.class));
         });
+
+        goToSignUp = findViewById(R.id.goTosignUp);
+        goToSignUp.setOnClickListener(v -> {
+            startActivity(new Intent(SignInActivity.this,SignUpActivity.class));
+        });
+
     }
 }

@@ -90,6 +90,7 @@
                 android:textColor="@color/colorApp" />
 
             <TextView
+                android:id="@+id/goToForgetPass"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
@@ -111,6 +112,7 @@
                 />
 
             <Button
+                android:id="@+id/goTosignUp"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
