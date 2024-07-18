@@ -69,9 +69,17 @@ public class SignUpActivity extends AppCompatActivity {
         } else if (!isValidPattern(emailString, EMAIL_PATTERN)) {
             email.setError("Email invalide !!");
 
-        } else if (cinString.length() < 8) {
+        } else if (cinString.length() != 8) {
+            cin.setError("CIN invalide ! Cela nécessite 8 numéros");
+        } else if (phoneString.length() != 8) {
+            phone.setError("Phone invalide !");
+            
+        } else if (passwordString.length()<8) {
+            password.setError("password doit contenir au moins 8 caractères");
 
-        }else
+        } else if (!(confirmPasswordString.equals(passwordString))) {
+            confirmPassword.setError("tu dois confirmer le password");
+        } else
             result = true ;
         return result;
     }

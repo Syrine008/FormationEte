@@ -54,6 +54,7 @@
                 android:textSize="15sp" />
 
             <EditText
+                android:id="@+id/emailSignIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_email"
@@ -75,6 +76,7 @@
                 android:textSize="15sp" />
 
             <EditText
+                android:id="@+id/passwordSignIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableEnd="@drawable/ic_password"
@@ -104,6 +106,7 @@
                 android:textColor="@color/colorApp" />
 
             <Button
+                android:id="@+id/btnSignIn"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
