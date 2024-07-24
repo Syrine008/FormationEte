@@ -23,7 +23,7 @@ public class SignInActivity extends AppCompatActivity {
     private TextView goToForgetPass;
 
     private EditText email, password;
-    private Button goToSignUp;
+    private TextView goToSignUp;
     private Button btnSignIn;
     private String emailString,passwordString;
     private final String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";

@@ -63,7 +63,7 @@
                 android:inputType="textEmailAddress"
                 android:padding="10sp"
                 android:hint="user@gmail.com"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:layout_marginTop="10sp"/>
 
             <TextView
@@ -85,7 +85,7 @@
                 android:inputType="textPassword"
                 android:hint="********"
                 android:padding="10sp"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:layout_marginTop="10sp"/>
 
             <CheckBox
@@ -118,20 +118,16 @@
 
                 />
 
-            <Button
+
+            <TextView
                 android:id="@+id/goTosignUp"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/white"
-                android:drawableLeft="@drawable/ic_back"
-                android:drawableTint="@color/colorApp"
+                android:layout_margin="10sp"
                 android:fontFamily="@font/kaushan_script_regular"
-                android:text="Back"
-                android:textColor="@color/colorApp"
-                android:textSize="20sp"
-
-                />
+                android:text="Don't you have an account ? Sign up !"
+                android:textColor="@color/colorApp" />
 
         </LinearLayout>
     </LinearLayout>
